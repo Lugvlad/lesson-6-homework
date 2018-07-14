@@ -5,8 +5,8 @@
       <div>
         <div class="main">
           <div class="main__book">
+           {% for book in books %}      
             <div class="book-preview">
-            {% for book in books %}
               <img class="book-preview__img" src={{ cover }} alt="Название книги">
               <div class="book-preview__name">{{ book.name }}</div>
               <div class="spring"></div>
@@ -20,7 +20,7 @@
                   <div class="book-preview-order__order button button--disable">Нет в наличии</div>
                   {% endif %}
               </div>
-            {% endfor %}
+             {% endfor %}     
             </div>
           </div>
         </div>
